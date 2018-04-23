@@ -91,15 +91,15 @@ def full? (board)
   board.none? { |e| e == " " }
 end
 
-def draw? (board)
-  if won?(board) && full?(board)
-    return true
-  elsif won?(board) == false && full?(board) == false
-    return false
-  elsif won?(board)
-    return
-  end
-end
+def draw?(board)
+  status = ""
+  if won?(board) == false && full?(board) == true
+      status = true
+    else 
+     status = false
+   end
+   status
+ end
 
 def over? (board)
   game_over = false
