@@ -117,13 +117,15 @@ def winner (board)
 end
 
 def play (board)
+  while over?(board) == false
+    turn (board)
+  end
+
   if won? (board) != false
     puts "congratulations #{winner(board)}!"
   elsif draw? (board) != false
     puts "It's a draw!"
   end
 
-  while over?(board) == false
-    turn (board)
-  end
+  
 end
