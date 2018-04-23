@@ -174,11 +174,7 @@ def turn(board)
   end
 end
 
-def play(board)
-  9.times do
-    turn(board)
-  end
-end
+
 
 def turn_count(board)
   counter = 0
@@ -249,7 +245,17 @@ def winner(board)
   end
 end
 
+# def play(board)
+#   9.times do
+#     turn(board)
+#   end
+# end
+
 def play(board)
+  9.times do
+    turn(board)
+  end
+
   while over?(board) == false
     turn(board)
   end
