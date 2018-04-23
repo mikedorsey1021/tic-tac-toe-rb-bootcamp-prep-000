@@ -245,17 +245,13 @@ def winner(board)
   end
 end
 
-# def play(board)
-#   9.times do
-#     turn(board)
-#   end
-# end
-
 def play(board)
   9.times do
     turn(board)
   end
+end
 
+def play(board)
   while over?(board) == false
     turn(board)
   end
