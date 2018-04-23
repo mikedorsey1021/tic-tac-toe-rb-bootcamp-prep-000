@@ -8,8 +8,8 @@
 #   [0,4,8],
 #   [6,4,2]
 # ]
-# 
-# 
+#
+#
 # def display_board(board)
 #   puts " #{board[0]} | #{board[1]} | #{board[2]} "
 #   puts "-----------"
@@ -17,23 +17,23 @@
 #   puts "-----------"
 #   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 # end
-# 
+#
 # def input_to_index(user_input)
 #   user_input.to_i - 1
 # end
-# 
+#
 # def move(board, index, current_player)
 #   board[index] = current_player
 # end
-# 
+#
 # def position_taken?(board, location)
 #   board[location] != " " && board[location] != ""
 # end
-# 
+#
 # def valid_move?(board, index)
 #   index.between?(0,8) && !position_taken?(board, index)
 # end
-# 
+#
 # def turn(board)
 #   puts "Please enter 1-9:"
 #   input = gets.strip
@@ -45,7 +45,7 @@
 #     turn(board)
 #   end
 # end
-# 
+#
 # def turn_count (board)
 #   counter = 0
 #   board.each do |x|
@@ -56,8 +56,8 @@
 #   end
 #   return counter
 # end
-# 
-# 
+#
+#
 # def current_player (board)
 #   if turn_count(board) % 2 == 0
 #     return "X"
@@ -65,7 +65,7 @@
 #     return "O"
 #   end
 # end
-# 
+#
 # def won? (board)
 #   value = false
 #   WIN_COMBINATIONS.each do |win_combination|
@@ -75,22 +75,22 @@
 #     position_1 = board[win_index_1]
 #     position_2 = board[win_index_2]
 #     position_3 = board[win_index_3]
-# 
+#
 #     if position_1 == "X" && position_2 == "X" && position_3 == "X"
 #       value = win_combination
 #     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
 #       value = win_combination
-# 
+#
 #     end
 #   end
-# 
+#
 #    value
 # end
-# 
+#
 # def full? (board)
 #   board.none? { |e| e == " " }
 # end
-# 
+#
 # def draw?(board)
 #   status = ""
 #   if won?(board) == false && full?(board) == true
@@ -100,27 +100,27 @@
 #    end
 #    status
 #  end
-# 
+#
 # def over? (board)
 #   game_over = false
 #   if won?(board) != false || draw?(board) == true || full?(board) == true
 #     game_over = true
-# 
+#
 #   end
 #    game_over
 # end
-# 
+#
 # def winner (board)
 #   if won?(board) != false
 #     board[won?(board)[0]]
 #   end
 # end
-# 
+#
 # def play (board)
 #   while over?(board) == false
 #     turn (board)
 #   end
-# 
+#
 #   if won? (board) != false
 #     puts "congratulations #{winner(board)}!"
 #   elsif draw? (board) == true
@@ -195,8 +195,8 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
   ]
-  
-def won?(board) 
+
+def won?(board)
  result = false
  WIN_COMBINATIONS.each do |win_combination|
       win_index_1 = win_combination[0]
@@ -205,15 +205,15 @@ def won?(board)
       position_1 = board[win_index_1]
       position_2 = board[win_index_2]
       position_3 = board[win_index_3]
-  
-      if position_1 == "X" && position_2 == "X" && position_3 == "X" 
+
+      if position_1 == "X" && position_2 == "X" && position_3 == "X"
           result = win_combination
         elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
           result = win_combination
-        else 
+        else
       end
   end
-  
+
   result
 
 end
@@ -221,17 +221,17 @@ end
 def full?(board)
   board.none? { |value| value == " " }
 end
-  
+
 def draw?(board)
   status = ""
   if won?(board) == false && full?(board) == true
       status = true
-    else 
+    else
      status = false
    end
    status
  end
-    
+
 def over?(board)
   status = false
   if won?(board) != false || draw?(board) == true || full?(board) == true
