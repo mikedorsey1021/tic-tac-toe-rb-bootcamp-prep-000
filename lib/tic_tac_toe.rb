@@ -6,7 +6,7 @@ WIN_COMBINATIONS = [
   [1,4,7],
   [2,5,8],
   [0,4,8],
-  [2,4,6]
+  [6,4,2]
   ]
 
 def display_board(board)
