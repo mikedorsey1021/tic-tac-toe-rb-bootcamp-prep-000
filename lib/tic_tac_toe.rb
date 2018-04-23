@@ -126,6 +126,4 @@ def play (board)
   elsif draw? (board) == true
     puts "It's a draw!"
   end
-
-
 end
