@@ -176,14 +176,15 @@ end
 
 
 
-def turn_count(board)
+def turn_count (board)
   counter = 0
-  board.each do |board_element|
-    if ("#{board_element}" == "X" || "#{board_element}" == "O")
+  board.each do |x|
+    # index = 0
+    if x == "X" || x == "O"
       counter += 1
     end
   end
-  counter
+  return counter
 end
 
 def current_player (board)
