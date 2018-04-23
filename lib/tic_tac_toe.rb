@@ -123,7 +123,7 @@ def play (board)
 
   if won? (board) != false
     puts "congratulations #{winner(board)}!"
-  elsif draw? (board) != false
+  elsif draw? (board) == true
     puts "It's a draw!"
   end
 
