@@ -127,5 +127,5 @@ def play (board)
     puts "It's a draw!"
   end
 
-  
+
 end
